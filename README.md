@@ -10,7 +10,9 @@ We are developing a portable hardware system that uses low-cost microcontrollers
 
 ## Technology and Workflow
 
-Our prototype uses ESP32 and Arduino as the main controllers due to their affordability, flexibility, and wireless connectivity. We selected the OV2640 camera module because it delivers a strong balance of image quality, small size, low power draw, and direct compatibility with ESP32-CAM boards. Its 2MP sensor captures detailed images of skin lesions while keeping frame size and file size manageable for on-device processing or quick wireless upload. Using OV2640 lets us produce clear, repeatable lesion images under consistent lighting — a crucial factor for reliable ML inference. 
+Our prototype uses ESP32 and OV7670 as the main controllers due to their affordability, flexibility, and wireless connectivity.  
+The OV7670 camera module combined with the ESP32 offers a very affordable entry point into computer vision projects. Its VGA resolution (640×480) is sufficient for prototyping and experimenting with image capture, streaming, and basic vision tasks.  
+By combining OV7670 image data with mmWave sensor readings, our solution provides a more holistic analysis of skin lesions. While the camera captures the visual features (color, shape, border irregularities), the mmWave sensor provides structural insights, making early detection more accurate and reducing false positives
 A high-resolution camera module captures images of the skin, while additional sensors (such as temperature and color sensors) can provide supporting data about skin texture and pigmentation. The captured image is preprocessed and compared against dermatology image datasets of skin conditions, including melanoma, basal cell carcinoma, and benign moles. A trained machine learning model classifies the lesion and flags potential risks.
 
 The workflow is simple:
