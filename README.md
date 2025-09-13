@@ -24,8 +24,8 @@ The workflow is simple:
 - The device provides a risk alert and recommendation (e.g., “Consult a dermatologist”).
 
 ## Datasets Used
-The project dataset is openly available on HuggingFace (Falah/skin-cancer) and (marmal88/skin_cancer).
-The former dataset is smaller and focused on binary classification (benign vs malignant). This simplicity is valuable in the early stages of your project.
+The project dataset is openly available on HuggingFace (Falah/skin-cancer) and (marmal88/skin_cancer).  
+The former dataset is smaller and focused on binary classification (benign vs malignant). This simplicity is valuable in the early stages of your project.  
 The latter dataset is larger and more detailed, with multiple diagnostic categories (melanoma, basal cell carcinoma, benign lesions, etc.), plus metadata like patient age, sex, and lesion location.
 
 ## Impact and Vision
