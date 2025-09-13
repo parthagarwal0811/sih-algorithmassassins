@@ -1,1 +1,1 @@
-# sih-algorithmassassins
+# Skin Cancer Detection - App/Web based Service
