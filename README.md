@@ -14,13 +14,13 @@ Our prototype uses ESP32 and Arduino as the main controllers due to their afford
 
 The workflow is simple:
 
--The user places the device near the skin area.
+- The user places the device near the skin area.
 
--The camera and sensors capture data.
+- The camera and sensors capture data.
 
--Data is processed locally or sent for deeper cloud analysis.
+- Data is processed locally or sent for deeper cloud analysis.
 
--The device provides a risk alert and recommendation (e.g., “Consult a dermatologist”).
+- The device provides a risk alert and recommendation (e.g., “Consult a dermatologist”).
 
 ## Impact and Vision
 
