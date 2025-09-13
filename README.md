@@ -10,7 +10,8 @@ We are developing a portable hardware system that uses low-cost microcontrollers
 
 ## Technology and Workflow
 
-Our prototype uses ESP32 and Arduino as the main controllers due to their affordability, flexibility, and wireless connectivity. A high-resolution camera module captures images of the skin, while additional sensors (such as temperature and color sensors) can provide supporting data about skin texture and pigmentation. The captured image is preprocessed and compared against dermatology image datasets of skin conditions, including melanoma, basal cell carcinoma, and benign moles. A trained machine learning model classifies the lesion and flags potential risks.
+Our prototype uses ESP32 and Arduino as the main controllers due to their affordability, flexibility, and wireless connectivity. We selected the OV2640 camera module because it delivers a strong balance of image quality, small size, low power draw, and direct compatibility with ESP32-CAM boards. Its 2MP sensor captures detailed images of skin lesions while keeping frame size and file size manageable for on-device processing or quick wireless upload. Using OV2640 lets us produce clear, repeatable lesion images under consistent lighting — a crucial factor for reliable ML inference. 
+A high-resolution camera module captures images of the skin, while additional sensors (such as temperature and color sensors) can provide supporting data about skin texture and pigmentation. The captured image is preprocessed and compared against dermatology image datasets of skin conditions, including melanoma, basal cell carcinoma, and benign moles. A trained machine learning model classifies the lesion and flags potential risks.
 
 The workflow is simple:
 
@@ -21,6 +22,11 @@ The workflow is simple:
 - Data is processed locally or sent for deeper cloud analysis.
 
 - The device provides a risk alert and recommendation (e.g., “Consult a dermatologist”).
+
+## Datasets Used
+The project dataset is openly available on HuggingFace (Falah/skin-cancer) and (marmal88/skin_cancer).
+The former dataset is smaller and focused on binary classification (benign vs malignant). This simplicity is valuable in the early stages of your project.
+The latter dataset is larger and more detailed, with multiple diagnostic categories (melanoma, basal cell carcinoma, benign lesions, etc.), plus metadata like patient age, sex, and lesion location.
 
 ## Impact and Vision
 
